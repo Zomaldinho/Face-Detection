@@ -18,7 +18,7 @@ class Signin extends React.Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    fetch('http://localhost:3030/signin', {
+    fetch('https://faces-detection-api.herokuapp.com/signin', {
       method: 'post',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
