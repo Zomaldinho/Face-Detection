@@ -1,17 +1,12 @@
 import React from 'react';
 
-
-const Rank = () => {
-  return(
+const Rank = ({ name, entries }) => {
+  return (
     <div>
-      <div className='f3 white'>
-        {'Zoma your rank is ...'}
-      </div>
-      <div className='f1 white'>
-        {'#5'}
-      </div> 
-    </div>  
-  )
-} 
+      <div className="f3 white">{`${name} your current entry count is ${entries}`}</div>
+      {/* <div className="f1 white">{``}</div> */}
+    </div>
+  );
+};
 
 export default Rank;
