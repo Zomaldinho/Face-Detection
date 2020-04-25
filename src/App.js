@@ -45,7 +45,7 @@ let intialState = {
 class App extends Component {
   constructor() {
     super();
-    this.state = intialState
+    this.state = intialState;
   }
 
   loaduser = (data) => {
@@ -65,17 +65,22 @@ class App extends Component {
   };
 
   boxBoundries = (data) => {
-    const clarifaiFace =
-      data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('hoba');
     const width = Number(image.width);
     const height = Number(image.height);
-    return {
-      topRow: clarifaiFace.top_row * height,
-      leftCol: clarifaiFace.left_col * width,
-      buttomRow: height - clarifaiFace.bottom_row * height,
-      rightCol: width - clarifaiFace.right_col * width,
-    };
+    let outp = [];
+    let len = data.outputs[0].data.regions.length;
+    for (let i = 0; i < len; i++) {
+      let clarifaiFace =
+        data.outputs[0].data.regions[i].region_info.bounding_box;
+      outp.push({
+        topRow: clarifaiFace.top_row * height,
+        leftCol: clarifaiFace.left_col * width,
+        buttomRow: height - clarifaiFace.bottom_row * height,
+        rightCol: width - clarifaiFace.right_col * width,
+      });
+    }
+    return outp;
   };
 
   displayFace = (box) => {
