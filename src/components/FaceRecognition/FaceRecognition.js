@@ -18,13 +18,7 @@ const FaceRecognition = ({ imageURL, box }) => {
             ></div>
           );
         })}
-        <img
-          id="hoba"
-          width="500px"
-          height="auto"
-          src={imageURL}
-          alt="test img"
-        />
+        <img id="hoba" width="500px" height="auto" src={imageURL} alt="" />
       </div>
     </div>
   );

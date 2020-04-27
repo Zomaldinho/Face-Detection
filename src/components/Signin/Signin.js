@@ -45,10 +45,10 @@ class Signin extends React.Component {
   render() {
     const { onRouteChange } = this.props;
     return (
-      <div className="center" style={{width: '1000px'}}>
-        <article className="br2 ba dark-gray b--black-10 mv4 w-90 w-70-m w-35-l mw7 center" style={{width: '70%'}}>
+      <div className="center">
+        <article className="br2 ba dark-gray b--black-10 mv4 w-90 w-100-m w-100-l mw6 center" style={{width: '70%'}}>
           <main className="center pa4 black-80 w-100" >
-            <form className="measure center">
+            <form className="measure center" style={{width:'1000px'}}>
               <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
                 <legend className="f4 fw6 ph0 mh0">Sign In</legend>
                 <div className="mt3">

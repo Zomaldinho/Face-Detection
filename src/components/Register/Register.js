@@ -49,9 +49,9 @@ class Register extends React.Component {
   render() {
     return (
       <div className="">
-        <article className="br2 ba dark-gray b--black-10 mv4 w-90 w-70-m w-35-l mw7 center">
+        <article className="br2 ba dark-gray b--black-10 mv4 w-90 w-70-m w-35-l mw6 center">
           <main className="center pa4 black-80 w-100">
-            <form className="measure center">
+            <form className="measure center" style={{width:'1000px'}}>
               <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
                 <legend className="f4 fw6 ph0 mh0">Register</legend>
                 <div className="mt3">
